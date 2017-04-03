@@ -1,7 +1,13 @@
 <div class="body">
     {{#block "hero"}} {{/block}}
+    {{#if page_type '==' 'default'}}
+    <div class="container home">
+        {{#block "page"}} {{/block}}
+    </div>
+    {{else}}
     <div class="container">
         {{#block "page"}} {{/block}}
     </div>
+    {{/if}}
     {{> components/common/modal}}
 </div>

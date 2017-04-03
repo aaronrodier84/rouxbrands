@@ -1,0 +1,112 @@
+.Content.Widest {
+  padding: 0;
+  border: none;
+}
+.Content {
+  overflow: hidden;
+  padding: 0 0 20px 0;
+  min-height: 200px;
+}
+
+div.nospace {
+  width: 100%;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+div.tile-images {
+  width: 100%;
+  list-style-type: none;
+  display: inline-block!important;
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+div.nospace a {
+  padding: 0;
+  margin: 0;
+}
+
+div.nospace img {
+  width: 33.33%;
+  padding: 0;
+  margin: 0;
+}
+
+div.tile-text ul li {
+  vertical-align: top;
+  padding: .5%;
+  display: inline-block!important;
+  list-style-type: none;
+}
+
+.text-thirds {
+  width: 30%;
+}
+
+div.tile-text ul li {
+  vertical-align: top;
+  padding: .5%;
+  display: inline-block!important;
+  list-style-type: none;
+}
+
+
+.text-line {
+  margin-left: 15px;
+  margin-top: 20px;
+  line-height: 100%;
+  min-height: 180px;
+  border-left: 1px solid #cccccc;
+  vertical-align: middle;
+  width: 3px;
+}
+
+.container.home{
+  max-width: 100%;
+  padding: 0;
+}
+
+.home-text-carousel{
+  .block{
+    padding: 20px;
+    a{
+      text-decoration: none;
+    }
+  }
+}
+
+.top-banner{
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+  height: 150px;
+  position: relative;
+  background-color: #454545;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow: hidden;
+  .navUser-action{
+    color: #e2e3e3;
+  }
+
+  .navUser-item--cart .navUser-action{
+    color: #e2e3e3;
+  }
+
+  @media only screen and (max-width: 768px){
+    height: auto;
+  }
+}
+
+@media only screen and (min-width: 768px){
+  .contracted .top-banner {
+    height: 0;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+}
+
+.mobileMenu-toggle .mobileMenu-toggleIcon, .mobileMenu-toggle .mobileMenu-toggleIcon::before, .mobileMenu-toggle .mobileMenu-toggleIcon::after{
+  background: #dfdfdf;
+}

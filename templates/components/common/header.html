@@ -5,22 +5,23 @@
     </div>
 </div>
 {{/if}}
-<header class="header" role="banner">
+<header id="header" class="header" role="banner">
     <a href="#" class="mobileMenu-toggle" data-mobile-menu-toggle="menu">
         <span class="mobileMenu-toggleIcon">Toggle menu</span>
     </a>
+    <div class="top-banner">
+        {{> components/common/navigation}}
 
-    {{> components/common/navigation}}
-
-    {{#if template_file '===' 'pages/home'}}
-        <h1 class="header-logo header-logo--{{theme_settings.logo-position}}">
-            {{> components/common/store-logo}}
-        </h1>
-    {{else}}
-        <div class="header-logo header-logo--{{theme_settings.logo-position}}">
-            {{> components/common/store-logo}}
-        </div>
-    {{/if}}
+        {{#if template_file '===' 'pages/home'}}
+            <h1 class="header-logo header-logo--{{theme_settings.logo-position}}">
+                {{> components/common/store-logo}}
+            </h1>
+        {{else}}
+            <div class="header-logo header-logo--{{theme_settings.logo-position}}">
+                {{> components/common/store-logo}}
+            </div>
+        {{/if}}
+    </div>
 
 
     <div class="navPages-container" id="menu" data-menu>
@@ -28,3 +29,14 @@
     </div>
 
 </header>
+<script>
+    window.onscroll = function() {
+        if (document.body.scrollTop > 130 || document.documentElement.scrollTop > 130) {
+            document.getElementById('header').className = 'header contracted';
+            document.getElementsByClassName('body')[0].className = 'body contracted';
+        }else{
+            document.getElementById('header').className = 'header';
+            document.getElementsByClassName('body')[0].className = 'body';
+        }
+    };
+</script>

@@ -1,6 +1,6 @@
 {
-  "name": "Cornerstone",
-  "version": "1.6.3",
+  "name": "RouxBrands",
+  "version": "1.0.0",
   "meta": {
     "price": 0,
     "documentation_url": "https://support.bigcommerce.com/articles/Public/Cornerstone-Theme-Manual",
@@ -93,7 +93,7 @@
     "color-textBase": "#4f4f4f",
     "color-textBase--hover": "#a5a5a5",
     "color-textBase--active": "#a5a5a5",
-    "color-textSecondary": "#989898",
+    "color-textSecondary": "#2b2e33",
     "color-textSecondary--hover": "#4f4f4f",
     "color-textSecondary--active": "#4f4f4f",
     "color-textLink": "#4f4f4f",

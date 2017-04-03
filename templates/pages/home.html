@@ -25,17 +25,102 @@ blog:
     {{/each}}
 
 <div class="main full">
-    {{#if products.featured}}
-        {{> components/products/featured products=products.featured columns=theme_settings.homepage_featured_products_column_count}}
-    {{/if}}
 
-    {{#if products.top_sellers}}
-        {{> components/products/top products=products.top_sellers columns=theme_settings.homepage_top_products_column_count}}
-    {{/if}}
+    <div class="Content Widest" id="LayoutColumn1">
+        <div class="nospace">
+            <div class="tile-images"><a href="https://www.youtube.com/watch?v=BijR_yCBaDM"><img src="https://cdn3.bigcommerce.com/s-urrxd/product_images/uploaded_images/wholesale-gifts-01.jpg?t=1483640615" border="0"/></a><a href="http://rouxbrands.com/catalog-roux/"><img src="https://cdn3.bigcommerce.com/s-urrxd/product_images/uploaded_images/wholesale-gifts-02.jpg?t=1483640615" border="0"/></a><a href="https://youtu.be/_zYkMjdO6A4"><img src="https://cdn3.bigcommerce.com/s-urrxd/product_images/uploaded_images/wholesale-gifts-03.jpg?t=1483640616" border="0"/></a>
+            </div>
+        </div>
+        <div class="nospace">
+            <div class="tile-images"><a href="http://www.rouxbrands.com/collections/soiree/"><img src="https://cdn3.bigcommerce.com/s-urrxd/product_images/uploaded_images/fleur-de-lis-decor-01.jpg?t=1483645902" border="0"/></a><a href="http://rouxbrands.com/catalog-collections/summer-love-bags-accessories/"><img src="https://cdn3.bigcommerce.com/s-urrxd/product_images/uploaded_images/fleur-de-lis-decor-02.jpg?t=1483645903" border="0"/></a><a href="http://rouxbrands.com/collections/dinnerware/"><img src="https://cdn3.bigcommerce.com/s-urrxd/product_images/uploaded_images/fleur-de-lis-decor-03.jpg?t=1483645903" border="0"/></a>
+            </div>
+        </div>
+        <div class="nospace">
+            <div class="tile-images"><a href="http://rouxbrands.com/fall-2016/message-boards-and-decor/"><img src="https://cdn3.bigcommerce.com/s-urrxd/product_images/uploaded_images/wholesale-home-decor-01.jpg?t=1483645886" border="0"/></a><a href="http://rouxbrands.com/wholesale-hand-towels/"><img src="https://cdn3.bigcommerce.com/s-urrxd/product_images/uploaded_images/wholesale-home-decor-02.jpg?t=1483645887" border="0"/></a><a href="http://rouxbrands.com/wholesale-glassware/roux-collection/"><img src="https://cdn3.bigcommerce.com/s-urrxd/product_images/uploaded_images/wholesale-home-decor-03.jpg?t=1483645887" border="0"/></a>
+            </div>
+        </div>
+        <div class="nospace">
+            <div class="tile-images"><a href="http://rouxbrands.com/wholesale-bath-bombs/"><img src="https://cdn3.bigcommerce.com/s-urrxd/product_images/uploaded_images/home-decor-wholesale-01.jpg?t=1483646636" border="0"/></a><a href="http://rouxbrands.com/wholesale-candles-diffusers-sachets/"><img src="https://cdn3.bigcommerce.com/s-urrxd/product_images/uploaded_images/home-decor-wholesale-02.jpg?t=1483646636" border="0"/></a><a href="http://rouxbrands.com/collections/stainless-grilling/"><img src="https://cdn3.bigcommerce.com/s-urrxd/product_images/uploaded_images/home-decor-wholesale-03.jpg?t=1483646637" border="0"/></a>
+            </div>
+        </div>
 
-    {{#if products.new}}
-        {{> components/products/new products=products.new columns=theme_settings.homepage_new_products_column_count}}
-    {{/if}}
+        <div class="tiles-main">
+            <div class="nospace">
+                <div class="tile-text">
+
+                    <div class="home-text-carousel"
+                         data-slick='{
+                                        "infinite": false,
+                                        "slidesToShow": 1,
+                                        "slidesToScroll": 1,
+                                        "autoplay": true,
+                                        "autoplaySpeed": 4000,
+                                        "mobileFirst": true,
+                                        "responsive": [
+                                            {
+                                                "breakpoint": 1260,
+                                                "settings": {
+                                                    "slidesToScroll": 1,
+                                                    "slidesToShow": 3
+                                                }
+                                            },
+                                            {
+                                                "breakpoint": 800,
+                                                "settings": {
+                                                    "slidesToScroll": 1,
+                                                    "slidesToShow": 2
+                                                }
+                                            },
+                                            {
+                                                "breakpoint": 550,
+                                                "settings": {
+                                                    "slidesToScroll": 1,
+                                                    "slidesToShow": 1
+                                                }
+                                            }
+                                        ]}'>
+                        <div class="block">
+                            <a href="/history-of-the-fleur-de-lis/"><h1>Fleur-de-Lis in History</h1></a>
+                            The Fleur-de-lis. A symbol most Louisianans are familiar with as a decorative piece on porches, wall hangings or clothing.
+
+                            But have you ever heard the story of how the Fleur-de-lis came to be, and why it made its way into Louisiana?
+
+                            In French, fleur-de-lis literally means "lily flower". It may come as no surprise that an emblem found all over the state of Louisiana has its roots in a flower from French culture, stemming from the French colonization of the Americas, particularly present day Louisiana...
+                        </div>
+                        <div class="block">
+                            <a href="/story-of-roux-brands/"><h1>Making Roux Brands</h1></a>
+                            Roux Brands was pioneered by Angela Carville Fluker in 2006.
+                            It began as a retail store in the confines of a small guesthouse and is now a bustling cluster of warehouses.
+                            Angela focused primarily on Fleur-de-lis pewter but, over the years, we quickly diversified into a broad line of Southern décor
+                            products inspired by the charm and decadence of the Gulf South. We’ve gone from single piece sales to bulk orders of hundreds
+                            in a very short time. But our growth has not been without hardship. Fortunately, persistence prevails...
+                        </div>
+                        <div class="block">
+                            <a href="/design-to-shelf-gumbo-bowl/"><h1>Creation of the Gumbo Bowl</h1></a>
+                            Gumbo, the quintessential melting pot, is a Southern tradition and quite possibly one of the few truly indigenous American fares. It is an elegant dish that permits endless variation. Yet some aspects of the dish are completely obstinate. When Roux Brands elected to pursue the legacy of Gumbo bowl design, we knew “the recipe” permitted pizazz, but never felt so at home as to recreate the classic bowl without adhering to the standards by which the dish is measured. Our designers took creative charge while maintaining a truth to Gumbo that should never be left out...
+                        </div>
+                        <div class="block">
+                            <a href="/wholesale-home-decor/"><h1>Wholesale Home Decor</h1></a>
+                            Finding the right vendor to stock your gift shop or boutique can be challenging. Roux Brands stocks an outstanding selection of wholesale home decor at affordable prices and excellent quality. We're constantly looking to expand our wholesale home decor offering and broader our list of wholesale products for you to shop. As we continue to grow into the company you need us to be, trust us to tell the story that sells.
+                        </div>
+                        <div class="block">
+                            <a href=""><h1>Online Wholesale Shopping</h1></a>
+                            As technology has progressed, so too has the wholesale buying process. We were sad to loose many of you to our online shopping interface, but having the time to phone in or fax in orders can be difficult. We're making a brand new commitment in 2017 to provide you with the best wholesale home decor online shopping experience possible. Please let us know when something's not right and we'll be certain to make it so. Roux Brands is commited to the best gifts and premiums that resonate your own unique story.
+                        </div>
+                        <div class="block">
+                            <a href=""><h1>Reaching a Broader Audience</h1></a>
+                            For many years we've remained commited to designing and importing wholesale gifts and premiums that speak to our home region, but our dreams are much larger than that. Roux Brands is striving to provide the same story telling ability to a larger, more diverse audience. We think our unique talents will make this dream a reality. We look forward to seeing what you'll do.
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </div>
+
 </div>
 {{/partial}}
 {{> layout/base}}

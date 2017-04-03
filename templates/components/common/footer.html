@@ -18,7 +18,7 @@
         {{/if}}
         <section class="footer-info">
             <article class="footer-info-col footer-info-col--small" data-section-type="footer-webPages">
-                <h5 class="footer-info-heading">{{lang 'footer.navigate'}}</h5>
+                <!--<h5 class="footer-info-heading">{{lang 'footer.navigate'}}</h5>-->
                 <ul class="footer-info-list">
                     {{#each pages}}
                         <li>
@@ -43,26 +43,26 @@
             </article>
 
             {{#if theme_settings.shop_by_brand_show_footer}}
-            <article class="footer-info-col footer-info-col--small" data-section-type="footer-brands">
-                <h5 class="footer-info-heading">{{lang 'footer.brands'}}</h5>
-                <ul class="footer-info-list">
-                    {{#each shop_by_brand}}
-                        <li>
-                            <a href="{{url}}">{{name}}</a>
-                        </li>
-                    {{/each}}
-                    <li><a href="{{urls.brands}}">{{lang 'common.view_all'}}</a></li>
-                </ul>
-            </article>
+            <!--<article class="footer-info-col footer-info-col&#45;&#45;small" data-section-type="footer-brands">-->
+                <!--<h5 class="footer-info-heading">{{lang 'footer.brands'}}</h5>-->
+                <!--<ul class="footer-info-list">-->
+                    <!--{{#each shop_by_brand}}-->
+                        <!--<li>-->
+                            <!--<a href="{{url}}">{{name}}</a>-->
+                        <!--</li>-->
+                    <!--{{/each}}-->
+                    <!--<li><a href="{{urls.brands}}">{{lang 'common.view_all'}}</a></li>-->
+                <!--</ul>-->
+            <!--</article>-->
             {{/if}}
 
-            <article class="footer-info-col footer-info-col--small" data-section-type="storeInfo">
-                <h5 class="footer-info-heading">{{lang 'footer.info'}}</h5>
-                <address>{{nl2br settings.address}}</address>
-                {{#if settings.phone_number}}
-                    <strong>{{lang 'footer.call_us' phone_number=settings.phone_number}}</strong>
-                {{/if}}
-            </article>
+            <!--<article class="footer-info-col footer-info-col&#45;&#45;small" data-section-type="storeInfo">-->
+                <!--<h5 class="footer-info-heading">{{lang 'footer.info'}}</h5>-->
+                <!--<address>{{nl2br settings.address}}</address>-->
+                <!--{{#if settings.phone_number}}-->
+                    <!--<strong>{{lang 'footer.call_us' phone_number=settings.phone_number}}</strong>-->
+                <!--{{/if}}-->
+            <!--</article>-->
 
             <article class="footer-info-col" data-section-type="newsletterSubscription">
                 {{#if settings.show_newsletter_box}}
@@ -78,13 +78,13 @@
         {{/if}}
         {{#if theme_settings.show_powered_by}}
             <div class="footer-copyright">
-                <p class="powered-by">Powered by <a href="http://bigcommerce.com" rel="nofollow">BigCommerce</a></p>
+                <p class="powered-by">All prices are in USD.&copy; <span id="copyright_year"></span> {{settings.store_name}}</p>
             </div>
         {{/if}}
         {{#if theme_settings.show_copyright_footer}}
-            <div class="footer-copyright">
-                <p class="powered-by">&copy; <span id="copyright_year"></span> {{settings.store_name}} </p>
-            </div>
+            <!--<div class="footer-copyright">-->
+                <!--<p class="powered-by">&copy; <span id="copyright_year"></span> {{settings.store_name}} </p>-->
+            <!--</div>-->
             <script type="text/javascript">
                 document.getElementById("copyright_year").innerHTML = new Date().getFullYear();
             </script>

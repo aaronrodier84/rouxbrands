@@ -23,7 +23,7 @@
     @include breakpoint("medium") {
         border-bottom: container("border");
         overflow: visible;
-        position: relative;
+        //position: relative;
     }
 
     &.is-open {
@@ -46,7 +46,7 @@
     }
 
     @include breakpoint("medium") {
-        margin: (spacing("double") + spacing("base")) auto (spacing("double") + spacing("single"));
+        //margin: (spacing("double") + spacing("base")) auto (spacing("double") + spacing("single"));
         padding: 0;
 
         .header.fixed & {
