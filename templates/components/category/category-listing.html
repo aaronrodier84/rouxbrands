@@ -1,0 +1,8 @@
+
+{{#if theme_settings.product_list_display_mode '===' 'grid'}}
+    {{> components/category/grid categories=category.subcategories theme_settings=theme_settings}}
+{{else}}
+    {{> components/category/list categories=category.subcategories theme_settings=theme_settings}}
+{{/if}}
+
+

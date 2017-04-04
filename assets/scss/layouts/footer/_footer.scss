@@ -15,7 +15,7 @@
 .footer {
     background-color: $footer-background;
     border-top: container("border");
-    padding: spacing("double") 0;
+    padding: spacing("double") 0 0 0;
 }
 
 .footer-info {
@@ -95,6 +95,7 @@
     margin-left: 0;
 
     a {
+        font-size: 12px;
         color: stencilColor("color-textSecondary");
         text-decoration: none;
 

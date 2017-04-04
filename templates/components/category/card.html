@@ -1,0 +1,30 @@
+<article class="card {{#if alternate}}card--alternate{{/if}}">
+    <figure class="card-figure">
+        <a href="{{url}}">
+            <img class="card-image lazyload" data-sizes="auto" src="{{cdn 'img/loading.svg'}}" data-src="{{getImage image 'productgallery_size' (cdn theme_settings.default_image_product)}}" alt="{{image.alt}}" title="{{image.alt}}">
+        </a>
+    </figure>
+    <div class="card-body">
+        {{#if show_rating}}
+            <p class="card-text" data-test-info-type="productRating">
+                <span class="rating--small">
+                    {{> components/products/ratings rating=rating}}
+                </span>
+            </p>
+        {{/if}}
+        {{#if brand.name}}
+            <!--<p class="card-text" data-test-info-type="brandName">{{brand.name}}</p>-->
+        {{/if}}
+        <h4 class="card-title">
+            <a href="{{url}}">{{name}}({{product_count}})</a>
+        </h4>
+
+        <!--<div class="card-text" data-test-info-type="price">-->
+            <!--{{#or customer (if theme_settings.restrict_to_login '!==' true)}}-->
+                <!--{{> components/products/price price=price customer=customer}}-->
+            <!--{{else}}-->
+                <!--{{> components/common/login-for-pricing}}-->
+            <!--{{/or}}-->
+        <!--</div>-->
+    </div>
+</article>

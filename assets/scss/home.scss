@@ -110,3 +110,10 @@ div.tile-text ul li {
 .mobileMenu-toggle .mobileMenu-toggleIcon, .mobileMenu-toggle .mobileMenu-toggleIcon::before, .mobileMenu-toggle .mobileMenu-toggleIcon::after{
   background: #dfdfdf;
 }
+
+.container.copyright {
+  background: #f8f8f8;
+  color: #2b2e33;
+  padding: 20px;
+  border-top: solid 2px #dfdfdf;
+}

@@ -94,7 +94,7 @@
     "color-textBase--hover": "#a5a5a5",
     "color-textBase--active": "#a5a5a5",
     "color-textSecondary": "#2b2e33",
-    "color-textSecondary--hover": "#4f4f4f",
+    "color-textSecondary--hover": "#ccc",
     "color-textSecondary--active": "#4f4f4f",
     "color-textLink": "#4f4f4f",
     "color-textLink--hover": "#a5a5a5",
