@@ -241,7 +241,7 @@
     padding: spacing("single") 0;
 
     @include breakpoint("small") {
-        padding: spacing("double");
+        //padding: spacing("double");
     }
 
     &.is-open {

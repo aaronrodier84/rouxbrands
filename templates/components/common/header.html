@@ -14,11 +14,20 @@
 
         {{#if template_file '===' 'pages/home'}}
             <h1 class="header-logo header-logo--{{theme_settings.logo-position}}">
-                {{> components/common/store-logo}}
+                <!--{{> components/common/store-logo}}-->
+                <a href="/">
+                    <span class="logo-text-first">ROUX</span>
+                    <span class="logo-text-last">BRANDS</span>
+                </a>
             </h1>
         {{else}}
             <div class="header-logo header-logo--{{theme_settings.logo-position}}">
-                {{> components/common/store-logo}}
+                <!--{{> components/common/store-logo}}-->
+                <a href="/">
+                    <span class="logo-text-first">ROUX</span>
+                    <span class="logo-text-last">BRANDS</span>
+                </a>
+
             </div>
         {{/if}}
     </div>
@@ -26,6 +35,7 @@
 
     <div class="navPages-container" id="menu" data-menu>
         {{> components/common/navigation-menu}}
+        <div style="clear: both;"></div>
     </div>
 
 </header>

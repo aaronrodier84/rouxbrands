@@ -61,13 +61,15 @@
 
     > a {
         @include clearfix;
-        color: $storeName-color;
+        color: white;
         display: inline-block;
         padding: $header-logo-paddingVertical 0;
         position: relative;
         text-decoration: none;
         width: 100%;
         z-index: zIndex("low");
+        font-size: 44px;
+        font-family: serif;
 
         // scss-lint:disable NestingDepth
         @include breakpoint("medium") {
@@ -83,6 +85,10 @@
 
         &:active {
             color: color("link", "active");
+        }
+
+        .logo-text-last{
+            font-size: 12px;
         }
     }
 }
