@@ -27,9 +27,9 @@
                     {{/if}}
                 {{/unless}}
                 {{#if show_compare}}
-                    <label class="button button--small card-figcaption-button" for="compare-{{id}}">
-                        {{lang 'products.compare'}} <input type="checkbox" name="products[]" value="{{id}}" id="compare-{{id}}" data-compare-id="{{id}}">
-                    </label>
+                    <!--<label class="button button&#45;&#45;small card-figcaption-button" for="compare-{{id}}">-->
+                        <!--{{lang 'products.compare'}} <input type="checkbox" name="products[]" value="{{id}}" id="compare-{{id}}" data-compare-id="{{id}}">-->
+                    <!--</label>-->
                 {{/if}}
                 {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
                     {{#if show_cart_action}}
@@ -72,5 +72,9 @@
                 <!--{{> components/common/login-for-pricing}}-->
             <!--{{/or}}-->
         <!--</div>-->
+
+        <div class="button button--small card-figcaption-button no-hover-border" for="compare-{{id}}">
+            <input type="checkbox" name="products[]" value="{{id}}" id="compare-{{id}}" data-compare-id="{{id}}"> <label for="compare-{{id}}">{{lang 'products.compare'}}</label>
+        </div>
     </div>
 </article>

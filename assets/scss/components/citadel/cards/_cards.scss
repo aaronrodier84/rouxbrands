@@ -78,9 +78,20 @@
     display: $card-figcaption-button-display;
     margin: $card-figcaption-button-margin;
 
+    &.quickview{
+        //border: 1px solid red;
+    }
+
     &:active {
         background-color: $card-figcaption-button-backgroundHover;
         border: $card-figcaption-button-border;
+    }
+
+    &:hover{
+        border: 1px solid #ff5221;
+    }
+    &.no-hover-border:hover{
+        border: none;
     }
 
     + .card-figcaption-button {
