@@ -12,11 +12,30 @@
     margin-bottom: spacing("double") * 2;
     margin-top: spacing("single"); // 1
 
+    .tiles-main{
+        margin-top: 2.8rem;
+    }
+
     @include breakpoint("medium") {
         margin-top: spacing("single") + spacing("base"); // 1
         padding-top: 200px;
+        .tiles-main{
+            margin-top: -2.6rem;
+        }
+    }
+
+    &.contracted{
+        .tiles-main{
+            margin-top: -2rem;
+        }
+    }
+
+    .breadcrumbs{
+        text-align: left;
     }
 }
+
+
 
 
 .page {

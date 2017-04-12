@@ -169,7 +169,7 @@
 }
 
 .navUser-item-cartLabel {
-    display: none;
+    //display: none;
 
     @include breakpoint("small") {
         display: inline;

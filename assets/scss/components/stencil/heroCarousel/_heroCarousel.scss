@@ -22,10 +22,12 @@
 
 .heroCarousel {
     margin-bottom: (spacing("double") + spacing("single"));
-    margin-top: -(spacing("single")); // 3
+    //margin-top: -(spacing("single")); // 3
+    margin-top: 0;
 
     @include breakpoint("medium") {
-        margin-top: -(spacing("single") + spacing("base")); // 3
+        //margin-top: -(spacing("single") + spacing("base")); // 3
+        margin-top: 0;
     }
 
     .js & { // 2
