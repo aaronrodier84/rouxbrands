@@ -213,14 +213,7 @@
                     {{/if}}
                 {{/if}}
             </form>
-            {{#if settings.show_wishlist}}
-                <form class="form" method="post" action="{{product.add_to_wishlist_url}}" data-wishlist-add>
-                    <div class="form-action">
-                        <input type="hidden" name="variation_id" value="">
-                        <input class="button" type="submit" value="{{lang 'account.wishlists.add_item'}}">
-                    </div>
-                </form>
-            {{/if}}
+
         </div>
 
         {{{snippet 'product_details'}}}
@@ -248,7 +241,14 @@
                </div>
            {{/if}}
         </div>
-
+        {{#if settings.show_wishlist}}
+        <form class="form" method="post" action="{{product.add_to_wishlist_url}}" data-wishlist-add>
+            <div class="form-action">
+                <input type="hidden" name="variation_id" value="">
+                <input class="button" type="submit" value="{{lang 'account.wishlists.add_item'}}">
+            </div>
+        </form>
+        {{/if}}
         {{> components/common/share}}
     </article>
 </div>
