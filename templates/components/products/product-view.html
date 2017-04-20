@@ -12,9 +12,9 @@
         <div class="productView-product">
             <h1 class="productView-title" {{#if schema}}itemprop="name"{{/if}}>{{product.title}}</h1>
 
-            <h2 class="productView-brand"{{#if schema}} itemprop="brand" itemscope itemtype="http://schema.org/Brand"{{/if}}>
-                <a href="{{product.brand.url}}"{{#if schema}} itemprop="url"{{/if}}><span{{#if schema}} itemprop="name"{{/if}}>{{product.brand.name}}</span></a>
-            </h2>
+            <!--<h2 class="productView-brand"{{#if schema}} itemprop="brand" itemscope itemtype="http://schema.org/Brand"{{/if}}>-->
+                <!--<a href="{{product.brand.url}}"{{#if schema}} itemprop="url"{{/if}}><span{{#if schema}} itemprop="name"{{/if}}>{{product.brand.name}}</span></a>-->
+            <!--</h2>-->
             {{#if product.call_for_price}}
                 <p class="productView-price">
                     <span>{{product.call_for_price}}</span>
@@ -146,7 +146,33 @@
                     <dd class="productView-info-value">{{{value}}}</dd>
                 {{/each}}
             </dl>
+            <ul class="tabs" data-tab>
+                <li class="tab is-active">
+                    <a class="tab-title" href="#tab-description">{{lang 'products.description'}}</a>
+                </li>
+                {{#if product.warranty}}
+                <li class="tab">
+                    <a class="tab-title" href="#tab-warranty">{{lang 'products.warranty'}}</a>
+                </li>
+                {{/if}}
+            </ul>
+            <div class="tabs-contents">
+                <div class="tab-content is-active" id="tab-description" style="padding: 0.5rem 0;">
+                    {{{product.description}}}
+                    {{{snippet 'product_description'}}}
+                </div>
+                {{#if product.warranty}}
+                <div class="tab-content" id="tab-warranty" style="padding: 0.5rem 0;">
+                    {{{product.warranty}}}
+                </div>
+                {{/if}}
+            </div>
+            <!--<article class="productView-description"{{#if schema}} itemprop="description"{{/if}} style="width: 100%">-->
+                <!---->
+
+            <!--</article>-->
         </div>
+
     </section>
 
     <section class="productView-images" data-image-gallery>
@@ -175,6 +201,7 @@
             {{/each}}
         </ul>
     </section>
+
 
     <section class="productView-details">
         <div class="productView-options">
@@ -212,45 +239,26 @@
                         {{> components/common/alert-error (lang 'products.sold_out')}}
                     {{/if}}
                 {{/if}}
+
             </form>
+
+            {{#if settings.show_wishlist}}
+            <form class="form" method="post" action="{{product.add_to_wishlist_url}}" data-wishlist-add>
+                <div class="form-action">
+                    <input type="hidden" name="variation_id" value="">
+                    <input class="button" type="submit" value="{{lang 'account.wishlists.add_item'}}">
+                </div>
+            </form>
+            {{/if}}
+
+            {{> components/common/share}}
 
         </div>
 
         {{{snippet 'product_details'}}}
     </section>
 
-    <article class="productView-description"{{#if schema}} itemprop="description"{{/if}}>
-        <ul class="tabs" data-tab>
-            <li class="tab is-active">
-                <a class="tab-title" href="#tab-description">{{lang 'products.description'}}</a>
-            </li>
-            {{#if product.warranty}}
-                <li class="tab">
-                    <a class="tab-title" href="#tab-warranty">{{lang 'products.warranty'}}</a>
-                </li>
-            {{/if}}
-        </ul>
-        <div class="tabs-contents">
-            <div class="tab-content is-active" id="tab-description">
-                {{{product.description}}}
-                {{{snippet 'product_description'}}}
-            </div>
-           {{#if product.warranty}}
-               <div class="tab-content" id="tab-warranty">
-                   {{{product.warranty}}}
-               </div>
-           {{/if}}
-        </div>
-        {{#if settings.show_wishlist}}
-        <form class="form" method="post" action="{{product.add_to_wishlist_url}}" data-wishlist-add>
-            <div class="form-action">
-                <input type="hidden" name="variation_id" value="">
-                <input class="button" type="submit" value="{{lang 'account.wishlists.add_item'}}">
-            </div>
-        </form>
-        {{/if}}
-        {{> components/common/share}}
-    </article>
+
 </div>
 
 <div id="previewModal" class="modal modal--large" data-reveal>

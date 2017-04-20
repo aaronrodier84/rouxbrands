@@ -78,7 +78,8 @@
 // -----------------------------------------------------------------------------
 
 .productView-details {
-    margin-bottom: spacing("single") + spacing("third");
+    //margin-bottom: spacing("single") + spacing("third");
+    margin-bottom: 1rem;
 }
 
 
@@ -88,7 +89,7 @@
 .productView-product {
     @include breakpoint("medium") {
         border-bottom: container("border");
-        padding-bottom: spacing("single") + spacing("third");
+        //padding-bottom: spacing("single") + spacing("third");
     }
 
     > :last-child {
@@ -101,7 +102,9 @@
     margin: -(spacing("half")) 0 spacing("quarter");
 
     @include breakpoint("medium") {
-        margin-top: spacing("single");
+        //margin-top: spacing("single");
+        margin-top: 0;
+        margin-bottom: 0;
     }
 
     @include breakpoint("large") {
@@ -134,11 +137,12 @@
 
 .productView-price {
     font-size: fontSize("smaller");
-    margin-bottom: spacing("third");
+    //margin-bottom: spacing("third");
+    margin-bottom: 0;
 
     @include breakpoint("medium") {
         font-size: fontSize("larger");
-        margin-bottom: spacing("base");
+        //margin-bottom: spacing("base");
     }
 
     .price-section--saving {
@@ -192,7 +196,8 @@
     > :first-child {
 
         @include breakpoint("small") {
-            margin-top: spacing("single");
+            //margin-top: spacing("single");
+            margin-top: 0.5rem;
         }
     }
 
@@ -212,7 +217,8 @@
 
 .productView-info-name {
     clear: both;
-    margin-bottom: spacing("eighth");
+    //margin-bottom: spacing("eighth");
+    margin-bottom: 0;
     margin-right: spacing("quarter");
 
     @include breakpoint("small") {
@@ -223,10 +229,12 @@
 }
 
 .productView-info-value {
-    margin-bottom: spacing("quarter");
+    //margin-bottom: spacing("quarter");
+    margin-bottom: 0.5rem;
 
     @include breakpoint("small") {
-        margin-bottom: spacing("base");
+        //margin-bottom: spacing("base");
+        margin-bottom: 0.5rem;
     }
 }
 
@@ -265,7 +273,7 @@
 
     .form-field {
         font-size: 0; // 2
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
 
         // scss-lint:disable SelectorDepth, NestingDepth
         > .form-checkbox + .form-label,
@@ -359,4 +367,9 @@
 
 .shareProduct {
     text-align: center;
+}
+
+#form-action-addToCart {
+    background-color: #cccc4b;
+    border-color: #c7c7a5;
 }
