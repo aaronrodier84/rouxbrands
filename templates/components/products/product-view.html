@@ -146,31 +146,7 @@
                     <dd class="productView-info-value">{{{value}}}</dd>
                 {{/each}}
             </dl>
-            <ul class="tabs" data-tab>
-                <li class="tab is-active">
-                    <a class="tab-title" href="#tab-description">{{lang 'products.description'}}</a>
-                </li>
-                {{#if product.warranty}}
-                <li class="tab">
-                    <a class="tab-title" href="#tab-warranty">{{lang 'products.warranty'}}</a>
-                </li>
-                {{/if}}
-            </ul>
-            <div class="tabs-contents">
-                <div class="tab-content is-active" id="tab-description" style="padding: 0.5rem 0;">
-                    {{{product.description}}}
-                    {{{snippet 'product_description'}}}
-                </div>
-                {{#if product.warranty}}
-                <div class="tab-content" id="tab-warranty" style="padding: 0.5rem 0;">
-                    {{{product.warranty}}}
-                </div>
-                {{/if}}
-            </div>
-            <!--<article class="productView-description"{{#if schema}} itemprop="description"{{/if}} style="width: 100%">-->
-                <!---->
 
-            <!--</article>-->
         </div>
 
     </section>
@@ -204,6 +180,33 @@
 
 
     <section class="productView-details">
+        <ul class="tabs" data-tab>
+            <li class="tab is-active">
+                <a class="tab-title" href="#tab-description">{{lang 'products.description'}}</a>
+            </li>
+            {{#if product.warranty}}
+            <li class="tab">
+                <a class="tab-title" href="#tab-warranty">{{lang 'products.warranty'}}</a>
+            </li>
+            {{/if}}
+        </ul>
+        <div class="tabs-contents">
+            <div class="tab-content is-active" id="tab-description" style="padding: 0.5rem 0;">
+                {{{product.description}}}
+                {{{snippet 'product_description'}}}
+            </div>
+            {{#if product.warranty}}
+            <div class="tab-content" id="tab-warranty" style="padding: 0.5rem 0;">
+                {{{product.warranty}}}
+            </div>
+            {{/if}}
+        </div>
+        <!--<article class="productView-description"{{#if schema}} itemprop="description"{{/if}} style="width: 100%">-->
+        <!---->
+
+        <!--</article>-->
+
+        <hr style="margin: 0;">
         <div class="productView-options">
             {{#if product.release_date }}
                 <p>{{product.release_date}}</p>

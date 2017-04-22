@@ -102,7 +102,7 @@
 
         // scss-lint:disable NestingDepth
         &:hover {
-            color: stencilColor("color-textSecondary--hover");
+            color: gray;//stencilColor("color-textSecondary--hover");
         }
         // scss-lint:enable NestingDepth
     }

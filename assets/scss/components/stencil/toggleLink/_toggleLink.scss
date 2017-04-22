@@ -25,7 +25,7 @@ $toggle-spacing: spacing("single") + spacing("half");
     color: stencilColor("color-textSecondary");
 
     &:hover {
-        color: stencilColor("color-textSecondary--hover");
+        //color: stencilColor("color-textSecondary--hover");
     }
 
     .toggle-title & {
