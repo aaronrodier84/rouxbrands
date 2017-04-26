@@ -14,6 +14,9 @@ export default class Product extends PageManager {
         super(context);
         this.url = location.href;
         this.$reviewLink = $('[data-reveal-id="modal-review-form"]');
+        this.$buttonInc = $('[data-action="inc"]');
+        this.$buttonDec = $('[data-action="dec"]');
+        this.$qtyInput = $('.form-input--incrementTotal');
     }
 
     before(next) {
@@ -50,6 +53,27 @@ export default class Product extends PageManager {
                 return validator.areAll('valid');
             }
 
+            return false;
+        });
+
+        var self = this;
+        this.$buttonInc.on('click', function(e){
+            e.preventDefault();
+            var qtyStep = parseInt(self.$qtyInput.attr('data-quantity-min')) == 0 ? 1 : parseInt(self.$qtyInput.attr('data-quantity-min'));
+            var oldQty = parseInt(self.$qtyInput.val());
+            console.log(oldQty);
+            self.$qtyInput.val(oldQty + qtyStep);
+            return false;
+        });
+
+        this.$buttonDec.on('click', function(e){
+            e.preventDefault();
+            var qtyStep = parseInt(self.$qtyInput.attr('data-quantity-min')) == 0 ? 1 : parseInt(self.$qtyInput.attr('data-quantity-min'));
+            var oldQty = parseInt(self.$qtyInput.val());
+            console.log(oldQty);
+            if (oldQty > qtyStep){
+                self.$qtyInput.val(oldQty - qtyStep);
+            }
             return false;
         });
 
