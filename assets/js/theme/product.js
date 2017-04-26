@@ -2,6 +2,7 @@
  Import all product specific js
  */
 import $ from 'jquery';
+import _ from 'lodash';
 import PageManager from './page-manager';
 import Review from './product/reviews';
 import collapsibleFactory from './common/collapsible';
@@ -56,28 +57,32 @@ export default class Product extends PageManager {
             return false;
         });
 
-        var self = this;
-        this.$buttonInc.on('click', function(e){
-            e.preventDefault();
-            var qtyStep = parseInt(self.$qtyInput.attr('data-quantity-min')) == 0 ? 1 : parseInt(self.$qtyInput.attr('data-quantity-min'));
-            var oldQty = parseInt(self.$qtyInput.val());
-            console.log(oldQty);
-            self.$qtyInput.val(oldQty + qtyStep);
+        const increaseQty = _.bind(_.debounce(this.increaseQty, 100), this);
+        this.$buttonInc.on('click', (event) => {
+            increaseQty($(event.currentTarget));
+            event.preventDefault();
             return false;
         });
 
-        this.$buttonDec.on('click', function(e){
-            e.preventDefault();
-            var qtyStep = parseInt(self.$qtyInput.attr('data-quantity-min')) == 0 ? 1 : parseInt(self.$qtyInput.attr('data-quantity-min'));
-            var oldQty = parseInt(self.$qtyInput.val());
-            console.log(oldQty);
-            if (oldQty > qtyStep){
-                self.$qtyInput.val(oldQty - qtyStep);
-            }
+        this.$buttonDec.on('click', (event) => {
+            increaseQty($(event.currentTarget));
+            event.preventDefault();
             return false;
         });
 
         next();
+    }
+
+    increaseQty($target) {
+        const qtyStep = parseInt(this.$qtyInput.attr('data-quantity-min'), 10) === 0 ? 1 : parseInt(this.$qtyInput.attr('data-quantity-min'), 10);
+        const oldQty = parseInt(this.$qtyInput.val(), 10);
+        if ($target.data('action') === 'inc') {
+            this.$qtyInput.val(oldQty + qtyStep);
+        } else {
+            if (oldQty > qtyStep) {
+                this.$qtyInput.val(oldQty - qtyStep);
+            }
+        }
     }
 
     after(next) {
