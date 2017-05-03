@@ -64,8 +64,8 @@
                     <dd class="productView-info-value" data-product-sku>{{product.sku}}</dd>
                 {{/if}}
                 {{#if product.upc}}
-                    <dt class="productView-info-name">{{lang 'products.upc'}}</dt>
-                    <dd class="productView-info-value" data-product-upc>{{product.upc}}</dd>
+                    <!--<dt class="productView-info-name">{{lang 'products.upc'}}</dt>-->
+                    <!--<dd class="productView-info-value" data-product-upc>{{product.upc}}</dd>-->
                 {{/if}}
                 {{#if product.condition}}
                     <dt class="productView-info-name">{{lang 'products.condition'}}</dt>
@@ -106,13 +106,13 @@
                     {{/if}}
                 {{/if}}
                 {{#if product.bulk_discount_rates.length}}
-                    <dt class="productView-info-name">{{lang 'products.bulk_pricing.title'}}</dt>
-                    <dd class="productView-info-value">
-                        <a href="{{product.url}}"
-                            {{#unless is_ajax }}data-reveal-id="bulkPricingModal" {{/unless}}>
-                            {{lang 'products.bulk_pricing.view'}}
-                        </a>
-                    </dd>
+                    <!--<dt class="productView-info-name">{{lang 'products.bulk_pricing.title'}}</dt>-->
+                    <!--<dd class="productView-info-value">-->
+                        <!--<a href="{{product.url}}"-->
+                            <!--{{#unless is_ajax }}data-reveal-id="bulkPricingModal" {{/unless}}>-->
+                            <!--{{lang 'products.bulk_pricing.view'}}-->
+                        <!--</a>-->
+                    <!--</dd>-->
 
                     <div id="bulkPricingModal" class="modal modal--small" data-reveal>
                         <div class="modal-header">
