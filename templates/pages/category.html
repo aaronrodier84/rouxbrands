@@ -21,7 +21,7 @@ category:
     <!--<img src="{{getImage category.image 'zoom_size'}}">-->
 {{/if}}
 <!--<h1 class="page-heading">{{category.name}}</h1>-->
-{{{category.description}}}
+<!--{{{category.description}}}-->
 {{{snippet 'categories'}}}
 <div class="page">
     {{#if category.subcategories}}
@@ -42,6 +42,9 @@ category:
         </main>
     {{/if}}
 </div>
+
+{{{category.description}}}
+
 
 {{/partial}}
 {{> layout/base}}
