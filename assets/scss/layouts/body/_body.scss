@@ -78,14 +78,16 @@
 
 .heroCarousel{
     .slick-next, .slick-prev{
-        background: transparent;
+        //background: transparent;
+        background: rgba(255,255,255,0.5);
     }
 }
 
 .heroCarousel-slide {
     &.bottom {
         .heroCarousel-content{
-            background: transparent;
+            //background: transparent;
+            background: rgba(255, 255, 255, 0.2);
         }
 
         .heroCarousel-title{
