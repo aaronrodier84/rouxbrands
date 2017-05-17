@@ -85,14 +85,32 @@
 
 .heroCarousel-slide {
     &.bottom {
+        .heroCarousel-image {
+            display: none;
+            @include breakpoint("medium") { // 1
+                visibility: hidden;
+                display: block;
+            }
+        }
+
         .heroCarousel-content{
             //background: transparent;
             background: rgba(255, 255, 255, 0.2);
+            @include breakpoint("small") { // 1
+                min-height: 300px;
+            }
         }
 
         .heroCarousel-title{
             color: #4e4d4d;
-            font-size: 36px;
+            font-size: 16px;
+            @include breakpoint("medium") { // 1
+                font-size: 36px;
+            }
+
+            @include breakpoint("medium") { // 1
+                font-size: 24px;
+            }
         }
 
         hr{
@@ -106,9 +124,16 @@
         }
 
         .heroCarousel-description{
-            font-size: 18px;
+            font-size: 12px;
             font-style: italic;
             color: #4e4d4d;
+            @include breakpoint("medium") { // 1
+                font-size: 18px;
+            }
+
+            @include breakpoint("medium") { // 1
+                font-size: 14px;
+            }
         }
         .button--carousel {
             background-color: #e7e6e6;
@@ -359,6 +384,13 @@
             right: -15px;
             background: rgba(0,0,0,0.1);
         }
+    }
+}
+
+.button{
+    &.button--yellow{
+        background-color: #cccc4b;
+        border-color: #c7c7a5;
     }
 }
 
