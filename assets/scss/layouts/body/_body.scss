@@ -104,12 +104,13 @@
         .heroCarousel-title{
             color: #4e4d4d;
             font-size: 16px;
-            @include breakpoint("medium") { // 1
-                font-size: 36px;
-            }
 
             @include breakpoint("small") { // 1
                 font-size: 24px;
+            }
+
+            @include breakpoint("medium") { // 1
+                font-size: 36px;
             }
         }
 
@@ -127,12 +128,13 @@
             font-size: 12px;
             font-style: italic;
             color: #4e4d4d;
-            @include breakpoint("medium") { // 1
-                font-size: 18px;
-            }
 
             @include breakpoint("small") { // 1
                 font-size: 14px;
+            }
+            
+            @include breakpoint("medium") { // 1
+                font-size: 18px;
             }
         }
         .button--carousel {
