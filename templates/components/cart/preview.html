@@ -8,7 +8,7 @@
     <div class="previewCart">
         <section class="previewCartCheckout">
             {{#if cart.show_primary_checkout_button}}
-                <a href="{{urls.checkout.single_address}}" class="button button--primary">
+                <a href="{{urls.checkout.single_address}}" class="button button--primary" onclick="return checkTotalPrice();">
                     {{lang 'cart.added_to_cart.proceed_to_checkout'}}
                 </a>
             {{/if}}
@@ -121,3 +121,15 @@
         </section>
     {{/if}}
 </div>
+
+<script>
+    var totalPrice = {{cart.sub_total.value}};
+
+    function checkTotalPrice(){
+        if (customerGroupName == 'Wholesale' && totalPrice < 100){
+            alert('Order minumim price should be greater than $100 for wholesale customer!');
+            return false;
+        }
+    }
+
+</script>
