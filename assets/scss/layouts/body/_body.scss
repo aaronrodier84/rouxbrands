@@ -10,7 +10,8 @@
 
 .body {
     //margin-bottom: spacing("double") * 2;
-    margin-top: spacing("single"); // 1
+    //margin-top: spacing("single"); // 1
+    margin-top: 18px;
 
     .tiles-main{
         margin-top: 2.8rem;
@@ -18,7 +19,7 @@
 
     @include breakpoint("medium") {
         margin-top: spacing("single") + spacing("base"); // 1
-        padding-top: 200px;
+        padding-top: 164px;
         .tiles-main{
             margin-top: -2.6rem;
         }
@@ -132,7 +133,7 @@
             @include breakpoint("small") { // 1
                 font-size: 14px;
             }
-            
+
             @include breakpoint("medium") { // 1
                 font-size: 18px;
             }
