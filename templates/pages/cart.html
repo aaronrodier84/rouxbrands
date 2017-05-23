@@ -23,7 +23,7 @@
 
             {{#if cart.show_primary_checkout_button}}
                 <div class="cart-actions">
-                    <a class="button button--primary" href="{{urls.checkout.single_address}}" title="{{lang 'cart.checkout.title'}}">{{lang 'cart.checkout.button'}}</a>
+                    <a class="button button--primary" href="{{urls.checkout.single_address}}" title="{{lang 'cart.checkout.title'}}" onclick="return checkTotalPriceOnCart();">{{lang 'cart.checkout.button'}}</a>
                     {{#if cart.show_multiple_address_shipping}}
                         <a class="checkoutMultiple" href="{{urls.checkout.multiple_address}}">
                             {{lang 'cart.preview.checkout_multiple'}}
@@ -50,6 +50,29 @@
         {{{snippet 'cart'}}}
     </main>
 </div>
+
+<script>
+    function checkTotalPriceOnCart(){
+        var strPrice = document.getElementsByClassName('cart-total-value')[0].getElementsByTagName('span')[0].textContent.replace('$', '');
+        var totalPrice = parseFloat(strPrice);
+        if (customerGroupName == 'Wholesale' && totalPrice < 100) {
+            alert('Order minumim price should be greater than $100 for wholesale customer!');
+            return false;
+        }
+
+    }
+
+    function findByAttributeValue(attribute, value)    {
+        var All = document.getElementsByTagName('*');
+        for (var i = 0; i < All.length; i++)       {
+            if (All[i].getAttribute(attribute) == value) { return All[i]; }
+        }
+    }
+
+    console.log(findByAttributeValue('alt', 'Checkout with PayPal'));
+    findByAttributeValue('alt', 'Checkout with PayPal').setAttribute('onclick', 'return checkTotalPriceOnCart();');
+
+</script>
 {{/partial}}
 {{> layout/base}}
 `

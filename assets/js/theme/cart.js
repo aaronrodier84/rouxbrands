@@ -16,17 +16,6 @@ export default class Cart extends PageManager {
 
         this.bindEvents();
 
-        this.$customerGroupName = $('#customer-group-name').val();
-
-        // check wholesale price limit ($100)
-        $('[title="Click here to proceed to checkout"]', $('.cart-actions')).on('click', () => {
-            const totalPrice = parseInt($('li:nth-child(1) .cart-total-value span').text().replace('$', ''), 2);
-            if (this.$customerGroupName === 'Wholesale' && totalPrice < 100) {
-                alert('Order minumim price should be greater than $100 for wholesale customer!');
-                return false;
-            }
-        });
-
         next();
     }
 
